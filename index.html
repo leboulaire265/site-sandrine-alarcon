@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sandrine Alarcon — Retrouver une énergie durable</title>
+<meta name="description" content="Coaching système nerveux, vitalité et Ayurvéda pour les femmes de 35 à 55 ans épuisées par le rythme. S'attaquer aux vraies causes, pas aux symptômes." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   Sandrine Alarcon — Page de vente
+   Système nerveux · Vitalité · Ayurvéda
+   ============================================================ */
+
+:root {
+  --cream:        oklch(0.972 0.012 84);
+  --cream-deep:   oklch(0.946 0.018 80);
+  --beige:        oklch(0.905 0.024 76);
+  --beige-deep:   oklch(0.858 0.030 72);
+  --sienna:       oklch(0.565 0.094 47);
+  --sienna-deep:  oklch(0.470 0.090 45);
+  --sage:         oklch(0.620 0.040 144);
+  --sage-deep:    oklch(0.470 0.040 146);
+  --ink:          oklch(0.318 0.022 58);
+  --ink-soft:     oklch(0.470 0.020 60);
+  --ink-faint:    oklch(0.600 0.016 64);
+  --line:         oklch(0.840 0.020 72);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans:  "Mulish", "Segoe UI", system-ui, sans-serif;
+  --maxw: 1180px;
+  --gut: clamp(22px, 5vw, 64px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--sans); color: var(--ink); background: var(--cream); font-size: clamp(16px, 1.05vw, 18px); line-height: 1.7; font-weight: 400; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06; letter-spacing: -0.01em; color: var(--ink); }
+p { text-wrap: pretty; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gut); }
+section { position: relative; }
+
+.kicker { font-family: var(--sans); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sienna); display: inline-flex; align-items: center; gap: 0.7em; }
+.kicker::before { content: ""; width: 26px; height: 1px; background: var(--sienna); opacity: 0.6; }
+
+.btn { display: inline-flex; align-items: center; gap: 0.6em; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.01em; padding: 0.95em 1.7em; border-radius: 999px; border: 1px solid transparent; cursor: pointer; transition: transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease; text-align: center; }
+.btn-primary { background: var(--sienna); color: var(--cream); }
+.btn-primary:hover { background: var(--sienna-deep); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--sienna); color: var(--sienna); transform: translateY(-2px); }
+.btn-arrow { transition: transform .25s ease; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in oklab, var(--cream) 86%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+.brand { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap; }
+.brand small { display: block; font-family: var(--sans); font-size: 0.56rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-faint); margin-top: -2px; }
+.nav-links { display: flex; gap: 30px; font-size: 0.92rem; font-weight: 600; color: var(--ink-soft); }
+.nav-links a { transition: color .2s; }
+.nav-links a:hover { color: var(--sienna); }
+.nav .btn { padding: 0.7em 1.3em; font-size: 0.85rem; }
+@media (max-width: 880px) { .nav-links { display: none; } }
+
+/* HERO */
+.hero { background: radial-gradient(120% 90% at 88% 0%, var(--cream-deep) 0%, transparent 55%), var(--cream); padding-block: clamp(54px, 8vw, 110px); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 76px); align-items: center; }
+.hero h1 { font-size: clamp(2.7rem, 6vw, 4.7rem); margin: 0.5rem 0 0; }
+.hero h1 em { font-style: italic; color: var(--sienna); }
+.hero-sub { font-size: clamp(1.05rem, 1.6vw, 1.28rem); color: var(--ink-soft); max-width: 34ch; margin-top: 1.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2.2rem; }
+.hero-trust { margin-top: 2.4rem; font-size: 0.86rem; color: var(--ink-faint); display: flex; align-items: center; gap: 0.7em; }
+.hero-trust .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage-deep); }
+
+.ph { position: relative; background-color: var(--beige); background-image: repeating-linear-gradient(-45deg, transparent 0 11px, color-mix(in oklab, var(--beige-deep) 70%, transparent) 11px 12px); border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: flex-end; justify-content: flex-start; overflow: hidden; }
+.ph span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.7rem; letter-spacing: 0.04em; color: var(--ink-soft); background: var(--cream); border: 1px solid var(--line); border-radius: 4px; padding: 5px 9px; margin: 14px; }
+.hero-photo { aspect-ratio: 4 / 5; }
+
+/* SECTIONS */
+.sec { padding-block: clamp(64px, 9vw, 124px); }
+.sec-head { max-width: 56ch; }
+.sec-head h2 { font-size: clamp(2rem, 4.2vw, 3.3rem); margin-top: 1rem; }
+.sec-head h2 em { font-style: italic; color: var(--sienna); }
+.sec-head .lede { font-size: clamp(1.05rem, 1.5vw, 1.22rem); color: var(--ink-soft); margin-top: 1.3rem; }
+.bg-deep { background: var(--cream-deep); }
+.bg-sage { background: var(--sage-deep); color: var(--cream); }
+.bg-sage h2, .bg-sage h3 { color: var(--cream); }
+.bg-sage .kicker { color: color-mix(in oklab, var(--cream) 85%, var(--sage)); }
+.bg-sage .kicker::before { background: var(--cream); }
+
+/* MIROIR */
+.mirror-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: clamp(36px, 5vw, 56px); }
+.mirror-item { background: var(--cream); padding: 26px 28px; display: flex; gap: 14px; align-items: flex-start; transition: background .25s; }
+.mirror-item:hover { background: var(--cream-deep); }
+.mirror-item .num { font-family: var(--serif); font-style: italic; font-size: 1.35rem; color: var(--sage-deep); line-height: 1; margin-top: 2px; }
+.mirror-item p { font-size: 0.98rem; color: var(--ink-soft); }
+.mirror-validate { margin-top: clamp(38px, 5vw, 56px); border-left: 3px solid var(--sienna); padding: 6px 0 6px 28px; max-width: 60ch; }
+.mirror-validate p { font-family: var(--serif); font-size: clamp(1.4rem, 2.6vw, 2rem); font-style: italic; line-height: 1.3; color: var(--ink); }
+
+/* RUPTURE */
+.rupture-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 36px); margin-top: clamp(40px, 5vw, 60px); }
+.rcard { border-radius: 12px; padding: clamp(28px, 3.5vw, 42px); }
+.rcard.old { background: color-mix(in oklab, var(--cream) 70%, transparent); border: 1px solid var(--line); }
+.rcard.new { background: var(--cream); border: 1px solid var(--sienna); box-shadow: 0 24px 60px -36px var(--sienna-deep); }
+.rcard h3 { font-size: 1.5rem; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6em; }
+.rcard .tag { font-family: var(--sans); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.rcard.old .tag { background: var(--beige); color: var(--ink-soft); }
+.rcard.new .tag { background: var(--sienna); color: var(--cream); }
+.rlist { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.rlist li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--ink-soft); }
+.rlist .mk { flex: 0 0 auto; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; margin-top: 2px; font-size: 0.7rem; font-weight: 800; }
+.old .mk { background: var(--beige-deep); color: var(--ink-soft); }
+.new .mk { background: var(--sage); color: var(--cream); }
+
+/* OFFRES */
+.offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.4vw, 28px); margin-top: clamp(44px, 5vw, 64px); align-items: stretch; }
+.offer { background: var(--cream); border: 1px solid var(--line); border-radius: 14px; padding: clamp(26px, 2.6vw, 38px); display: flex; flex-direction: column; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.offer:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -40px var(--sienna-deep); }
+.offer.feature { border-color: var(--sienna); background: linear-gradient(180deg, color-mix(in oklab, var(--sienna) 7%, var(--cream)), var(--cream)); }
+.offer-rank { font-family: var(--sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); display: flex; justify-content: space-between; align-items: center; }
+.offer-rank .badge { background: var(--sienna); color: var(--cream); padding: 4px 11px; border-radius: 999px; letter-spacing: 0.12em; }
+.offer h3 { font-size: 1.85rem; margin: 1.1rem 0 0.4rem; }
+.offer .price { font-family: var(--serif); font-size: 2.6rem; font-weight: 600; color: var(--sienna); margin: 0.5rem 0 0.2rem; line-height: 1; }
+.offer .price small { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--ink-faint); }
+.offer .desc { font-size: 0.96rem; color: var(--ink-soft); margin: 0.8rem 0 1.3rem; }
+.offer-list { list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 0.94rem; color: var(--ink-soft); padding-top: 1.3rem; border-top: 1px solid var(--line); margin-bottom: 1.8rem; }
+.offer-list li { display: flex; gap: 10px; align-items: flex-start; }
+.offer-list .ck { flex: 0 0 auto; color: var(--sage-deep); font-weight: 800; margin-top: 1px; }
+.offer .btn { margin-top: auto; width: 100%; justify-content: center; }
+.offer-help { margin-top: clamp(34px, 4vw, 48px); text-align: center; font-size: 1.02rem; color: var(--ink-soft); }
+.offer-help strong { color: var(--sienna); font-weight: 700; }
+
+/* À PROPOS */
+.about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(34px, 5vw, 72px); align-items: center; }
+.about-photo { aspect-ratio: 3 / 4; }
+.about-body h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 1rem 0 1.4rem; }
+.about-body p { color: var(--ink-soft); margin-bottom: 1.1rem; max-width: 52ch; }
+.about-sign { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--ink); margin-top: 0.6rem; }
+.about-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.8rem; }
+.about-pills span { font-size: 0.82rem; font-weight: 600; background: var(--cream); border: 1px solid var(--line); border-radius: 999px; padding: 7px 15px; color: var(--ink-soft); }
+
+/* TÉMOIGNAGES */
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(18px, 2.4vw, 28px); margin-top: clamp(40px, 5vw, 60px); }
+.testi { background: color-mix(in oklab, var(--cream) 88%, transparent); border: 1px solid color-mix(in oklab, var(--cream) 60%, var(--sage)); border-radius: 14px; padding: clamp(26px, 2.6vw, 34px); display: flex; flex-direction: column; }
+.testi .quote-mark { font-family: var(--serif); font-size: 3rem; line-height: 0.6; color: var(--sage); margin-bottom: 0.5rem; }
+.testi p { font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; color: var(--cream); font-style: italic; }
+.bg-sage .testi { background: color-mix(in oklab, var(--cream) 12%, transparent); border-color: color-mix(in oklab, var(--cream) 24%, transparent); }
+.testi .who { margin-top: auto; padding-top: 1.6rem; font-family: var(--sans); font-style: normal; font-size: 0.9rem; }
+.testi .who b { display: block; font-weight: 700; color: var(--cream); }
+.testi .who em { font-style: normal; color: color-mix(in oklab, var(--cream) 75%, var(--sage)); font-size: 0.85rem; }
+
+/* FAQ */
+.faq-list { margin-top: clamp(38px, 5vw, 56px); border-top: 1px solid var(--line); max-width: 820px; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-q { width: 100%; background: none; border: none; cursor: pointer; text-align: left; font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.55rem); color: var(--ink); padding: 26px 50px 26px 0; position: relative; line-height: 1.25; }
+.faq-q::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 300; font-size: 1.7rem; color: var(--sienna); transition: transform .3s ease; }
+.faq-item.open .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.faq-a-inner { padding: 0 50px 28px 0; color: var(--ink-soft); font-size: 1.02rem; }
+
+/* CTA FINAL */
+.cta-final { background: var(--sienna); color: var(--cream); border-radius: 18px; padding: clamp(48px, 7vw, 92px) clamp(28px, 5vw, 80px); text-align: center; margin-block: clamp(40px, 6vw, 80px); position: relative; overflow: hidden; }
+.cta-final::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 120% at 50% -10%, color-mix(in oklab, var(--cream) 18%, transparent), transparent 60%); pointer-events: none; }
+.cta-final .kicker { color: color-mix(in oklab, var(--cream) 88%, var(--sienna)); position: relative; }
+.cta-final .kicker::before { background: var(--cream); }
+.cta-final h2 { color: var(--cream); font-size: clamp(2.2rem, 5vw, 4rem); margin: 1rem auto 1.4rem; max-width: 18ch; position: relative; }
+.cta-final h2 em { font-style: italic; }
+.cta-final p { color: color-mix(in oklab, var(--cream) 88%, var(--sienna)); max-width: 44ch; margin: 0 auto 2.4rem; font-size: 1.1rem; position: relative; }
+.cta-final .btn-primary { background: var(--cream); color: var(--sienna-deep); position: relative; }
+.cta-final .btn-primary:hover { background: var(--cream-deep); }
+
+/* FOOTER */
+.footer { background: var(--ink); color: color-mix(in oklab, var(--cream) 78%, var(--ink)); padding-block: clamp(48px, 6vw, 72px); font-size: 0.92rem; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.footer .brand { color: var(--cream); }
+.footer .brand small { color: color-mix(in oklab, var(--cream) 55%, var(--ink)); }
+.footer p { margin-top: 1rem; max-width: 34ch; color: color-mix(in oklab, var(--cream) 64%, var(--ink)); }
+.footer h4 { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: color-mix(in oklab, var(--cream) 60%, var(--ink)); margin-bottom: 1rem; }
+.footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer a:hover { color: var(--cream); }
+.footer-bottom { margin-top: clamp(38px, 5vw, 56px); padding-top: 24px; border-top: 1px solid color-mix(in oklab, var(--cream) 18%, var(--ink)); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; color: color-mix(in oklab, var(--cream) 50%, var(--ink)); }
+
+/* RESPONSIVE */
+@media (max-width: 920px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-photo { order: -1; aspect-ratio: 16 / 11; max-height: 360px; }
+  .rupture-cols { grid-template-columns: 1fr; }
+  .offers-grid { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { aspect-ratio: 16 / 12; max-height: 380px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+}
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Sandrine Alarcon<small>Système nerveux · Vitalité · Ayurvéda</small></a>
+    <nav class="nav-links">
+      <a href="#miroir">Te reconnais-tu&nbsp;?</a>
+      <a href="#approche">L'approche</a>
+      <a href="#offres">Les offres</a>
+      <a href="#apropos">À propos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Réserver un appel<span class="btn-arrow">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="kicker">Pour les femmes qui n'en peuvent plus de tenir</span>
+      <h1>Tu n'es pas <em>condamnée</em> à être épuisée.</h1>
+      <p class="hero-sub">Fatigue qui ne passe pas, corps qui tire, tête embrouillée&nbsp;: ce n'est pas dans ta tête, et ce n'est pas une fatalité de l'âge. Ton corps essaie de te dire quelque chose.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#offres">Découvrir les accompagnements<span class="btn-arrow">→</span></a>
+        <a class="btn btn-ghost" href="#miroir">Est-ce que c'est moi&nbsp;?</a>
+      </div>
+      <div class="hero-trust"><span class="dot"></span> Approche globale&nbsp;: système nerveux · alimentation · rythme de vie</div>
+    </div>
+    <div class="hero-photo ph reveal" aria-label="Photo de Sandrine">
+      <span>photo-sandrine.jpg — portrait authentique, lumière naturelle</span>
+    </div>
+  </div>
+</section>
+
+<!-- MIROIR DU PROBLÈME -->
+<section class="sec bg-deep" id="miroir">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Ce que tu vis, au quotidien</span>
+      <h2>Tu fais tout «&nbsp;comme il faut&nbsp;»&hellip; et pourtant <em>rien ne tient</em>.</h2>
+      <p class="lede">Tu as déjà essayé le yoga, la méditation, les compléments, les régimes, les consultations ponctuelles. Ça marche un temps, puis ça s'effondre. Tu es fatiguée d'essayer.</p>
+    </div>
+    <div class="mirror-grid reveal">
+      <div class="mirror-item"><span class="num">01</span><p>Une fatigue chronique qui ne passe pas, même après une nuit complète.</p></div>
+      <div class="mirror-item"><span class="num">02</span><p>Des tensions et douleurs inexpliquées&nbsp;: nuque, dos, ventre.</p></div>
+      <div class="mirror-item"><span class="num">03</span><p>De l'irritabilité, des sautes d'humeur, une hypersensibilité à fleur de peau.</p></div>
+      <div class="mirror-item"><span class="num">04</span><p>Un brouillard mental, des difficultés à te concentrer et à décider.</p></div>
+      <div class="mirror-item"><span class="num">05</span><p>Une anxiété diffuse, le sentiment d'être en permanence en mode survie.</p></div>
+      <div class="mirror-item"><span class="num">06</span><p>Une digestion perturbée, des ballonnements, un transit capricieux.</p></div>
+      <div class="mirror-item"><span class="num">07</span><p>Une prise de poids inexpliquée, surtout autour du ventre.</p></div>
+      <div class="mirror-item"><span class="num">08</span><p>Le sentiment d'être déconnectée de toi — et de ne plus te reconnaître.</p></div>
+    </div>
+    <div class="mirror-validate reveal">
+      <p>Si tu te reconnais ici, tu es au bon endroit. Ce n'est pas un manque de volonté&nbsp;: c'est un problème de système.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LA RUPTURE -->
+<section class="sec" id="approche">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Pourquoi rien n'a tenu jusqu'ici</span>
+      <h2>Les solutions habituelles traitent des <em>symptômes</em> isolés. Ton corps, lui, fonctionne en système.</h2>
+      <p class="lede">La fatigue d'un côté, la digestion de l'autre, l'humeur ailleurs&hellip; tant que chaque signal est traité séparément, le fond du problème reste intact. Et il revient.</p>
+    </div>
+    <div class="rupture-cols">
+      <article class="rcard old reveal">
+        <h3><span class="tag">L'approche en silo</span></h3>
+        <ul class="rlist">
+          <li><span class="mk">—</span> On éteint un symptôme à la fois, sans regarder l'ensemble.</li>
+          <li><span class="mk">—</span> «&nbsp;Tout est normal&nbsp;» sur les bilans, mais tu souffres quand même.</li>
+          <li><span class="mk">—</span> Des efforts en plus à caser dans un agenda déjà saturé.</li>
+          <li><span class="mk">—</span> Des résultats qui durent quelques semaines, puis s'effondrent.</li>
+          <li><span class="mk">—</span> On te renvoie à l'âge, à la ménopause, à «&nbsp;c'est comme ça&nbsp;».</li>
+        </ul>
+      </article>
+      <article class="rcard new reveal">
+        <h3><span class="tag">L'approche globale de Sandrine</span></h3>
+        <ul class="rlist">
+          <li><span class="mk">✓</span> On relie tout&nbsp;: système nerveux, alimentation, rythme, rapport au corps.</li>
+          <li><span class="mk">✓</span> On régule le système nerveux pour sortir du mode survie permanent.</li>
+          <li><span class="mk">✓</span> L'Ayurvéda comme grille de lecture du corps — pas comme croyance.</li>
+          <li><span class="mk">✓</span> Des pratiques intégrables au quotidien, pas une charge de plus.</li>
+          <li><span class="mk">✓</span> On s'attaque aux vraies causes pour une énergie qui dure.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LES 3 OFFRES -->
+<section class="sec bg-deep" id="offres">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Trois portes d'entrée</span>
+      <h2>Choisis ton niveau de <em>profondeur</em> et de budget.</h2>
+      <p class="lede">De la plus accessible à la plus complète. Tu peux commencer là où tu te sens en confiance — et aller plus loin quand tu es prête.</p>
+    </div>
+    <div class="offers-grid">
+      <article class="offer reveal">
+        <div class="offer-rank"><span>Pour commencer</span></div>
+        <h3>Alimentation Sagesse</h3>
+        <div class="price">90&nbsp;€</div>
+        <p class="desc">Le premier pas. Un programme centré sur l'alimentation Ayurvédique pour amorcer le changement sans gros investissement.</p>
+        <ul class="offer-list">
+          <li><span class="ck">✓</span> Les principes de l'alimentation selon ton terrain</li>
+          <li><span class="ck">✓</span> Des repères concrets pour apaiser la digestion</li>
+          <li><span class="ck">✓</span> Des ajustements simples, applicables dès cette semaine</li>
+          <li><span class="ck">✓</span> Ressources téléchargeables <em>[contenu à compléter]</em></li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Commencer en douceur</a>
+      </article>
+      <article class="offer reveal">
+        <div class="offer-rank"><span>En autonomie</span></div>
+        <h3>Programme en autonomie</h3>
+        <div class="price">500&nbsp;€</div>
+        <p class="desc">Tous les outils, à ton rythme. Des modules vidéo et des ressources en accès à vie, sans suivi individuel.</p>
+        <ul class="offer-list">
+          <li><span class="ck">✓</span> Modules vidéo en accès à vie</li>
+          <li><span class="ck">✓</span> Comprendre et réguler ton système nerveux</li>
+          <li><span class="ck">✓</span> Alimentation, rythme et ancrage au quotidien</li>
+          <li><span class="ck">✓</span> Nombre de modules et thèmes <em>[à compléter]</em></li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Avancer à mon rythme</a>
+      </article>
+      <article class="offer feature reveal">
+        <div class="offer-rank"><span>Accompagnement complet</span><span class="badge">Le plus profond</span></div>
+        <h3>Accompagnement personnalisé</h3>
+        <div class="price">1&nbsp;500&nbsp;€</div>
+        <p class="desc">Guidée individuellement par Sandrine, sur plusieurs semaines. Pour celles qui veulent aller au fond et être accompagnées de près.</p>
+        <ul class="offer-list">
+          <li><span class="ck">✓</span> Suivi individuel sur plusieurs semaines</li>
+          <li><span class="ck">✓</span> Un plan construit pour ton terrain et ton quotidien</li>
+          <li><span class="ck">✓</span> Séances personnalisées avec Sandrine</li>
+          <li><span class="ck">✓</span> Détail des séances et modules <em>[à compléter]</em></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Être accompagnée<span class="btn-arrow">→</span></a>
+      </article>
+    </div>
+    <p class="offer-help reveal">Tu ne sais pas laquelle choisir&nbsp;? <strong>Commence par «&nbsp;Alimentation Sagesse&nbsp;»</strong>, ou réserve un appel découverte pour qu'on en parle ensemble.</p>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="sec" id="apropos">
+  <div class="wrap about-grid">
+    <div class="about-photo ph reveal" aria-label="Photo de Sandrine">
+      <span>portrait-sandrine.jpg — en situation, naturel</span>
+    </div>
+    <div class="about-body reveal">
+      <span class="kicker">À propos de Sandrine</span>
+      <h2>Une femme intelligente parle à une autre femme intelligente.</h2>
+      <p>Je ne te traiterai jamais comme une liste de symptômes à éteindre. J'accompagne des femmes qui ont déjà cherché, lu, essayé — et qui méritent qu'on relie enfin les points plutôt que de leur dire que «&nbsp;tout va bien&nbsp;».</p>
+      <p>Mon travail relie le système nerveux, l'alimentation et le rythme de vie, avec l'Ayurvéda comme outil de lecture du corps. Pas d'ésotérisme&nbsp;: un ancrage dans la physiologie du stress et l'écoute concrète de tes signaux.</p>
+      <p><em>[Biographie complète et parcours de Sandrine à compléter.]</em></p>
+      <p class="about-sign">Sandrine</p>
+      <div class="about-pills">
+        <span>Système nerveux</span><span>Vitalité</span><span>Ayurvéda</span><span>Régulation du stress</span><span>Écoute du corps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="sec bg-sage" id="temoignages">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Elles ont retrouvé leur énergie</span>
+      <h2>Ce que vivent les femmes accompagnées.</h2>
+    </div>
+    <div class="testi-grid">
+      <figure class="testi reveal">
+        <div class="quote-mark">&ldquo;</div>
+        <p>Pour la première fois depuis des années, je me réveille sans cette fatigue qui me collait à la peau. J'ai retrouvé une énergie qui dure.</p>
+        <figcaption class="who"><b>[Prénom]</b><em>Résultat concret — à compléter</em></figcaption>
+      </figure>
+      <figure class="testi reveal">
+        <div class="quote-mark">&ldquo;</div>
+        <p>J'ai enfin compris ce qui se passait dans mon corps. Ce n'était pas dans ma tête, et ce n'était pas une fatalité.</p>
+        <figcaption class="who"><b>[Prénom]</b><em>Résultat concret — à compléter</em></figcaption>
+      </figure>
+      <figure class="testi reveal">
+        <div class="quote-mark">&ldquo;</div>
+        <p>Les changements se sont glissés dans mon quotidien sans devenir une corvée de plus. Ça, ça a tout changé.</p>
+        <figcaption class="who"><b>[Prénom]</b><em>Résultat concret — à compléter</em></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Tes questions, honnêtement</span>
+      <h2>Avant de te lancer.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button">C'est un budget. Est-ce que ça vaut vraiment le coût&nbsp;?</button>
+        <div class="faq-a"><div class="faq-a-inner">La vraie question, c'est le coût de ne rien faire&nbsp;: une santé qui se dégrade, une énergie qui s'effrite, une qualité de vie et une performance en baisse — mois après mois. Investir ici, c'est arrêter de payer, en silence, le prix de l'épuisement.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">J'ai déjà essayé plein de choses, et ça n'a pas marché.</button>
+        <div class="faq-a"><div class="faq-a-inner">C'est normal&nbsp;: la plupart des solutions traitent un symptôme isolé. L'approche ici est globale — elle relie système nerveux, alimentation et rythme de vie pour agir sur les causes, là où les solutions en silo s'arrêtent.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Je n'ai pas le temps de m'occuper de moi.</button>
+        <div class="faq-a"><div class="faq-a-inner">Les pratiques s'intègrent à ton quotidien&nbsp;: elles ne sont pas une charge de plus à caser, mais une façon différente de traverser tes journées. On part de ta vie réelle, pas d'un emploi du temps idéal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">L'Ayurvéda, c'est ésotérique, non&nbsp;?</button>
+        <div class="faq-a"><div class="faq-a-inner">Ici, l'Ayurvéda est un outil de lecture du corps, pas une croyance. L'accompagnement s'ancre dans la physiologie du stress et le fonctionnement du système nerveux. Rien de magique&nbsp;: de l'observation et des ajustements concrets.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Est-ce que ça marche vraiment&nbsp;?</button>
+        <div class="faq-a"><div class="faq-a-inner">Les mécanismes te sont expliqués pour que tu comprennes ce qui change et pourquoi. Les résultats se mesurent concrètement&nbsp;: sommeil, énergie, digestion, clarté mentale. <em>[Témoignages et résultats détaillés à compléter.]</em></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Je ne suis pas sûre que ce soit fait pour moi.</button>
+        <div class="faq-a"><div class="faq-a-inner">Si tu es une femme qui a longtemps tenu le rythme du «&nbsp;sois forte&nbsp;», qui a déjà cherché des réponses sans en trouver de durables, et qui sent que son corps essaie de lui dire quelque chose — alors oui, c'est exactement pour toi. Et un appel découverte permet de le vérifier ensemble, sans engagement.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="wrap" id="contact">
+  <div class="cta-final reveal">
+    <span class="kicker">Le premier pas</span>
+    <h2>Ce que tu vis a un nom. Et <em>ça se traite.</em></h2>
+    <p>Réserve un appel découverte&nbsp;: on regarde ensemble où tu en es, et quelle porte d'entrée a du sens pour toi. Sans promesse magique, sans pression.</p>
+    <a class="btn btn-primary" href="mailto:contact@sandrinealarcon.fr">Réserver mon appel découverte<span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand">Sandrine Alarcon<small>Système nerveux · Vitalité · Ayurvéda</small></span>
+        <p>Accompagner les femmes à sortir du mode survie et à retrouver une énergie durable, en s'attaquant aux vraies causes.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#miroir">Te reconnais-tu&nbsp;?</a></li>
+          <li><a href="#approche">L'approche</a></li>
+          <li><a href="#offres">Les offres</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@sandrinealarcon.fr">contact@sandrinealarcon.fr</a></li>
+          <li><a href="https://instagram.com/sandrine.alarcon" target="_blank" rel="noopener">@sandrine.alarcon</a></li>
+          <li><a href="#contact">Appel découverte</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sandrine Alarcon. Tous droits réservés.</span>
+      <span><a href="#">Mentions légales</a> &nbsp;·&nbsp; <a href="#">Politique de confidentialité</a> &nbsp;·&nbsp; <a href="#">CGV</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.faq-item');
+      var answer = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(other) {
+        if (other !== item) { other.classList.remove('open'); other.querySelector('.faq-a').style.maxHeight = null; }
+      });
+      if (isOpen) { item.classList.remove('open'); answer.style.maxHeight = null; }
+      else { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+    });
+  });
+
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+</script>
+
+</body>
+</html>
